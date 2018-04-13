@@ -1,0 +1,13 @@
+Casos de Uso - UML 2.0
+(Adicionem mais casos para uma loja/sebo para termos opções)
+(Coloquem o nome do lado do caso que forem fazer)
+(Precisamos definir o site em que será feito os diagramas)
+
+-Comprar Livro
+-Buscar Livro
+-gerar boleto
+-Cadastrar Usuario
+-Listar livros por area
+-Anunciar Livro
+-Comunicar vendedor/comprador
+-selecionar método de entrega
