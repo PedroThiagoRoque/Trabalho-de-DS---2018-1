@@ -6,7 +6,7 @@ Casos de Uso - UML 2.0
 --usuario--
 -usuario (Marcos)- https://yuml.me/edit/1bc76383
 -Comprar Livro-
--Buscar Livro(Pedro) - http://yuml.me/ptroque/edit/Procurar_Livro
+-Buscar Livro(Pedro) - http://yuml.me/edit/2022e4d5
 -gerar boleto
 -Criar Usuario 
 -Listar livros por area
