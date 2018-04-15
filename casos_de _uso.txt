@@ -3,10 +3,12 @@ Casos de Uso - UML 2.0
 (Coloquem o nome do lado do caso que forem fazer)
 (Precisamos definir o site em que será feito os diagramas)
 
--Comprar Livro
--Buscar Livro
+--usuario--
+-usuario (Marcos)- https://yuml.me/edit/1bc76383
+-Comprar Livro-
+-Buscar Livro(Pedro) - http://yuml.me/ptroque/edit/Procurar_Livro
 -gerar boleto
--Cadastrar Usuario
+-Criar Usuario 
 -Listar livros por area
 -Anunciar Livro
 -Comunicar vendedor/comprador
