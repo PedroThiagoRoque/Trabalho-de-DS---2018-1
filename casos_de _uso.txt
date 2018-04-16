@@ -1,12 +1,14 @@
-Casos de Uso - UML 2.0
+﻿Casos de Uso - UML 2.0
 (Adicionem mais casos para uma loja/sebo para termos opções)
 (Coloquem o nome do lado do caso que forem fazer)
 (Precisamos definir o site em que será feito os diagramas)
 
---usuario--
--usuario (Marcos)- https://yuml.me/edit/1bc76383
+Link do diagrama de Casos de Uso:
+http://yuml.me/edit/9dc7d5b8
+
+--Usuario--
 -Comprar Livro-
--Buscar Livro(Pedro) - http://yuml.me/edit/2022e4d5
+-Buscar Livro
 -gerar boleto
 -Criar Usuario 
 -Listar livros por area
@@ -16,6 +18,7 @@ Casos de Uso - UML 2.0
 -Modificar status dos livros
 -Realizar Pedido
 -Visualizar Pedidos
+-Adicionar Avaliação
 
 --Moderador--
 -Remover usuário
