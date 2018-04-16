@@ -1,10 +1,18 @@
 ﻿Casos de Uso - UML 2.0
 (Adicionem mais casos para uma loja/sebo para termos opções)
 (Coloquem o nome do lado do caso que forem fazer)
-(Precisamos definir o site em que será feito os diagramas)
+Site que será utilizado para fazer os diagramas: https://yuml.me/
 
 Link do diagrama de Casos de Uso:
 http://yuml.me/edit/9dc7d5b8
+
+Exemplo da Descrição de um Caso de Uso:
+https://www.dropbox.com/s/e8ft8uzxmgepz3n/ExemploDescricaoCasodeUso.jpg?dl=0
+
+Link para documento da descrição textual dos casos de uso:
+https://docs.google.com/document/d/1_D6i4GAkBkTj4Ti87bESCugjb6MUYhswCC6C2xTBml4/edit?usp=sharing
+(acessem com o .inf)
+
 
 --Usuario--
 -Comprar Livro-
