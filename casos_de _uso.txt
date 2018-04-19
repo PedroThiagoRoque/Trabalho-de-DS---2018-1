@@ -4,7 +4,7 @@
 Site que será utilizado para fazer os diagramas: https://yuml.me/
 
 Link do diagrama de Casos de Uso:
-http://yuml.me/edit/9dc7d5b8
+https://drive.google.com/file/d/1Th3eWZvOiWAUA1Lb50E3vB3xNILkdGPX/view?usp=sharing
 
 Exemplo da Descrição de um Caso de Uso:
 https://www.dropbox.com/s/e8ft8uzxmgepz3n/ExemploDescricaoCasodeUso.jpg?dl=0
