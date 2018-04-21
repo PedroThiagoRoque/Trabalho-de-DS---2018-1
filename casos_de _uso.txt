@@ -1,7 +1,15 @@
 ﻿Casos de Uso - UML 2.0
 (Adicionem mais casos para uma loja/sebo para termos opções)
 (Coloquem o nome do lado do caso que forem fazer)
-Site que será utilizado para fazer os diagramas: https://yuml.me/
+Site que será utilizado para fazer os diagramas: https://www.draw.io/
+
+Alterações solicitadas: 
+ - Alterar sentido das setas dos usuário-comprador e usuário-vendedor em relação ao usuário,
+   seta não pode ter cor.
+ - Adicionar o caso de uso "Gerenciar Anuncios".
+ - Modificar o nome do caso de uso "Modificar status de livros" para "Modificar status de anuncios"
+ - Sugestão de incluir venda de gibis.
+
 
 Link do diagrama de Casos de Uso:
 https://drive.google.com/file/d/1Th3eWZvOiWAUA1Lb50E3vB3xNILkdGPX/view?usp=sharing
