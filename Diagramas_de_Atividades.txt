@@ -25,3 +25,4 @@ Diagramas de atividades a serem feitos:
 
 Site utilizado para a criação dos diagramas: https://www.draw.io/
 Link da pasta dos diagramas: https://drive.google.com/drive/folders/1s9BUsMiaDt4Egjor2KLq3DdF4iYl-K3n
+Slide Revisão: https://www.dropbox.com/s/dvb1wzjqkzdrfrc/aula2_DiagAtividades_elementosbasicos_2018-1.pdf?dl=0
