@@ -24,3 +24,4 @@ Diagramas de atividades a serem feitos:
 - Gerenciar Opções de Conta 
 
 Site utilizado para a criação dos diagramas: https://www.draw.io/
+Link da pasta dos diagramas: https://drive.google.com/drive/folders/1s9BUsMiaDt4Egjor2KLq3DdF4iYl-K3n
