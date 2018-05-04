@@ -2,27 +2,26 @@ Diagramas de atividades a serem feitos:
 
 - Realizar Login
 - Visualizar Pedidos
-- Cadastrar Anúncio
+- Cadastrar AnÃºncio
 - Buscar Produtos
 - Avaliar Vendedor
 - Visualizar Vendas
 - Editar Conta
-- Gerenciar Usuários
-- Remover Usuários
-- Aprovar Anúncios
-- Cadastrar Usuários
+- Gerenciar UsuÃ¡rios
+- Remover UsuÃ¡rios
+- Aprovar AnÃºncios
+- Cadastrar UsuÃ¡rios
 - Finalizar Compra
 - Adiciona Produto ao Carrinho
 - Efetuar Pagamento
 - Realizar Cadastro
 - Recuperar Senha
 - Vincular Conta ao Boa Compra
-- Gerenciar Anúncios
-- Reportar Anúncios
-- Pausar Anúncios
-- Excluir Anúncios
-- Gerenciar Opções de Conta 
+- Gerenciar AnÃºncios
+- Reportar AnÃºncios
+- Pausar AnÃºncios
+- Excluir AnÃºncios
+- Gerenciar OpÃ§Ãµes de Conta 
 
-Site utilizado para a criação dos diagramas: https://www.draw.io/
-Link da pasta dos diagramas: https://drive.google.com/drive/folders/1s9BUsMiaDt4Egjor2KLq3DdF4iYl-K3n
-Slide Revisão: https://www.dropbox.com/s/dvb1wzjqkzdrfrc/aula2_DiagAtividades_elementosbasicos_2018-1.pdf?dl=0
+Site utilizado para a criaÃ§Ã£o dos diagramas: https://www.draw.io/
+Slide RevisÃ£o: https://www.dropbox.com/s/dvb1wzjqkzdrfrc/aula2_DiagAtividades_elementosbasicos_2018-1.pdf?dl=0
