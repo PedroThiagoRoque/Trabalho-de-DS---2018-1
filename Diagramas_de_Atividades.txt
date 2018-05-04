@@ -7,8 +7,8 @@ Diagramas de atividades a serem feitos:
 - Avaliar Vendedor - Roque
 - Visualizar Vendas - Roque
 - Editar Conta - Roque
-- Gerenciar Usuários - Gusmao
-- Remover Usuários - Gusmao
+- Gerenciar Usuários - Gosmao
+- Remover Usuários - Gosmao
 - Aprovar Anúncios - Marcos
 - Cadastrar Usuários - Bruno
 - Finalizar Compra - Marcos
