@@ -5,54 +5,57 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2>Novo Usuário</h2>
+<h2>Novo Cliente</h2>
 
 <form action="add.php" method="post">
   <!-- area de campos do form -->
   <hr />
   <div class="row">
     <div class="form-group col-md-7">
-      <label for="nome">Nome:</label>
-      <input type="text" class="form-control" name="usuario['nome']">
+      <label for="name">Nome</label>
+      <input type="text" class="form-control" name="usuario['nome']" >
     </div>
 
-    <div class="form-group col-md-3">
-      <label for="cpf">CPF:</label>
+    <div class="form-group col-md-4">
+      <label for="campo2">CPF</label>
       <input type="text" class="form-control" name="usuario['cpf']">
     </div>
 
-    <div class="form-group col-md-2">
-      <label for="email">Email: </label>
-      <input type="text" class="form-control" name="usuario['email']">
-    </div>
-  </div>  
-  <div class="row">
-    <div class="form-group col-md-5">
-      <label for="senha">Senha: </label>
+    <div class="form-group col-md-4">
+      <label for="campo3">Senha</label>
       <input type="text" class="form-control" name="usuario['senha']">
     </div>
+    <div class="form-group col-md-7">
+      <label for="campo1">Endereço</label>
+      <input type="text" class="form-control" name="usuario['address']">
+    </div>
 
-    <div class="form-group col-md-3">
-      <label for="campo2">Cidade: </label>
-      <input type="text" class="form-control" name="usuario['cidade']">
-    </div>
-    
-    <div class="form-group col-md-2">
-      <label for="campo3">Endereço: </label>
-      <input type="text" class="form-control" name="usuario['endereco']">
-    </div>
-      
+  </div>
+  
   <div class="row">
-    <div class="form-group col-md-3">
-      <label for="campo1">Sexo: </label>
-      <input type="text" class="form-control" name="usuario['sexo']">
-    </div>
-        
-    <div class="form-group col-md-2">
-      <label for="campo3">Telefone</label>
-      <input type="text" class="form-control" name="usuario['telefone']">
+    
+    <div class="form-group col-md-5">
+      <label for="campo2">Email</label>
+      <input type="text" class="form-control" name="usuario['hood']">
     </div>
     
+    
+    <div class="form-group col-md-5">
+      <label for="campo3">Cidade</label>
+      <input type="text" class="form-control" name="usuario['zip_code']">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="form-group col-md-1">
+      <label for="campo1">Sexo</label>
+      <input type="text" class="form-control" name="usuario['city']">
+    </div>
+    
+    <div class="form-group col-md-5">
+      <label for="campo2">Telefone</label>
+      <input type="text" class="form-control" name="usuario['phone']">
+    </div>     
   </div>
   
   <div id="actions" class="row">
