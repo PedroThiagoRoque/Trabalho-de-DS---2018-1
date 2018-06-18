@@ -27,7 +27,7 @@ function find( $table = null, $id = null ) {
 
   if($table == 'usuario'){
     try{
-      $sql = "SELECT * FROM pessoa join usuario";
+      $sql = "SELECT * FROM pessoa INNER JOIN usuario ON pessoa.cpf=usuario.cpf";
 	    $result = $database->query($sql);
 	    if ($result->num_rows > 0) {
         $found = $result->fetch_all(MYSQLI_ASSOC);
