@@ -53,10 +53,13 @@
   </div>
   
   <div class="row">
-    <div class="form-group col-md-1">
-      <label for="campo1">Sexo</label>
-      <input type="text" class="form-control" name="usuario['sexo']" placeholder="F/M">
-    </div>
+    <div class="form-group col-md-2">
+    <label for="campo1">Sexo</label>
+	  <select type="text" class="form-control" placeholder="F/M" name="usuario['sexo']">
+		  <option value="f">Feminino</option>
+		  <option value="m">Masculino</option>
+	  </select>
+  </div>
     
     <div class="form-group col-md-5">
       <label for="campo2">Telefone</label>
