@@ -25,37 +25,52 @@ function find( $table = null, $id = null ) {
 	$database = open_database();
 	$found = null;
 
-	try {
-	  if ($id) {
-	    $sql = "SELECT * FROM " . $table . " WHERE id = " . $id;
+  if($table == 'usuario'){
+    try{
+      $sql = "SELECT * FROM pessoa join usuario";
 	    $result = $database->query($sql);
-	    
 	    if ($result->num_rows > 0) {
-	      $found = $result->fetch_assoc();
-	    }
-	    
-	  } else {
-	    
-	    $sql = "SELECT * FROM " . $table;
-	    $result = $database->query($sql);
-	    
-	    if ($result->num_rows > 0) {
-	      $found = $result->fetch_all(MYSQLI_ASSOC);
+        $found = $result->fetch_all(MYSQLI_ASSOC);
+      }
+      //var_dump($found);die;
+
+    } catch (Exception $e) {
+      $_SESSION['message'] = $e->GetMessage();
+      $_SESSION['type'] = 'danger';
+    }
+  }else{
+    try {
+      if ($id) {
+        $sql = "SELECT * FROM " . $table . " WHERE id = " . $id;
+        $result = $database->query($sql);
         
-        /* Metodo alternativo
-        $found = array();
-        while ($row = $result->fetch_assoc()) {
-          array_push($found, $row);
-        } */
-	    }
-	  }
-	} catch (Exception $e) {
-	  $_SESSION['message'] = $e->GetMessage();
-	  $_SESSION['type'] = 'danger';
+        if ($result->num_rows > 0) {
+          $found = $result->fetch_assoc();
+        }
+        
+      } else {
+        
+        $sql = "SELECT * FROM " . $table;
+        $result = $database->query($sql);
+        
+        if ($result->num_rows > 0) {
+          $found = $result->fetch_all(MYSQLI_ASSOC);
+          
+          /* Metodo alternativo
+          $found = array();
+          while ($row = $result->fetch_assoc()) {
+            array_push($found, $row);
+          } */
+        }
+      }
+    } catch (Exception $e) {
+      $_SESSION['message'] = $e->GetMessage();
+      $_SESSION['type'] = 'danger';
+    }
   }
 	
 	close_database($database);
-	return $found;
+  return $found;
 }
 
 /**
@@ -71,32 +86,27 @@ function find_all( $table ) {
 function save($table = null, $data = null) {
   $database = open_database();
 
-  $columns = null;
-  $values = null;
+  if($table == 'usuario'){
 
-  //print_r($data);
+    $sql1 = "INSERT INTO pessoa (NOME, CPF, EMAIL, SENHA, ADMIN)
+    VALUES ('{$data["'nome'"]}','{$data["'cpf'"]}', '{$data["'email'"]}', '{$data["'senha'"]}', '0')";
+    
+    $sql2 = "INSERT INTO usuario (CIDADE, ENDERECO, TELEFONE, SEXO, CPF)
+    VALUES ('{$data["'cidade'"]}','{$data["'endereco'"]}', '{$data["'telefone'"]}', '{$data["'sexo'"]}', '{$data["'cpf'"]}')";
+    //var_dump($sql2);die;
+    try {
+      $database->query($sql1);
+      $database->query($sql2);
 
-  foreach ($data as $key => $value) {
-    $columns .= trim($key, "'") . ",";
-    $values .= "'$value',";
-  }
-  // remove a ultima virgula
-  $columns = rtrim($columns, ',');
-  $values = rtrim($values, ',');
-  
-  $sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-
-  try {
-    $database->query($sql);
-
-    $_SESSION['message'] = 'Registro cadastrado com sucesso.';
-    $_SESSION['type'] = 'success';
-  
-  } catch (Exception $e) { 
-  
-    $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
-    $_SESSION['type'] = 'danger';
-  } 
+      $_SESSION['message'] = 'Registro cadastrado com sucesso.';
+      $_SESSION['type'] = 'success';
+    
+    } catch (Exception $e) { 
+    
+      $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+      $_SESSION['type'] = 'danger';
+    } 
+}
   close_database($database);
 }
 

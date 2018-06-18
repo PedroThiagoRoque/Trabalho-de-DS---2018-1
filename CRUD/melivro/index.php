@@ -14,10 +14,22 @@
 		<a href="usuarios/add.php" class="btn btn-primary">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<i class="fa fa-plus fa-5x"></i>
+					<i class="fa fa-user fa-5x"></i>
 				</div>
 				<div class="col-xs-12 text-center">
 					<p>Fazer Cadastro</p>
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="col-xs-6 col-sm-3 col-md-2">
+		<a href="usuarios/index.php" class="btn btn-primary">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<i class="fa fa-user fa-5x"></i>
+				</div>
+				<div class="col-xs-12 text-center">
+					<p>Ver Usuarios</p>
 				</div>
 			</div>
 		</a>
@@ -27,10 +39,23 @@
 		<a href="produtos/find.php" class="btn btn-default">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<i class="fa fa-user fa-5x"></i>
-				</div>
+					<i class="fa fa-book fa-5x"></i>
+					</div>
 				<div class="col-xs-12 text-center">
 					<p>Buscar Produto</p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="col-xs-6 col-sm-3 col-md-2">
+		<a href="produtos/listarprod.php" class="btn btn-default">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<i class="fa fa-book fa-5x"></i>
+				</div>
+				<div class="col-xs-12 text-center">
+					<p>Listar Produtos</p>
 				</div>
 			</div>
 		</a>

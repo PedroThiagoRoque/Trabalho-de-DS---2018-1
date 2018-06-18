@@ -3,29 +3,29 @@
 require_once('../config.php');
 require_once(DBAPI);
 
-$usuarios = null;
-$usuario = null;
+$produtos = null;
+$produto = null;
 
 /**
  *  Listagem de Clientes
  */
 function index() {
-  global $usuarios;
-  $usuarios = find_all('usuario');
+  global $produtos;
+  $produtos = find_all('produto');
 }
 
 /**
  *  Cadastro de Clientes
  */
 function add() {
-  if (!empty($_POST['usuario'])) {
-    $usuario = $_POST['usuario'];
+  if (!empty($_POST['produto'])) {
+    $produto = $_POST['produto'];
     //$today = date_create('now', new DateTimeZone('America/Sao_Paulo'));    
-    //$usuario['modified'] = $usuario['created'] = $today->format("Y-m-d H:i:s");
+    //$produto['modified'] = $produto['created'] = $today->format("Y-m-d H:i:s");
     
     
     
-    save('usuario', $usuario);
+    save('produto', $produto);
     header('location: index.php');
   }
 }
@@ -34,16 +34,16 @@ function add() {
  *  Visualização de um Cliente
  */
 function view($id = null) {
-  global $usuario;
-  $usuario = find('usuarios', $id);
+  global $produto;
+  $produto = find('produtos', $id);
 }
 
 /**
  *  Exclusão de um Cliente
  */
 function delete($id = null) {
-  global $usuario;
-  $usuario = remove('usuarios', $id);
+  global $produto;
+  $produto = remove('produtos', $id);
   header('location: index.php');
 }
 

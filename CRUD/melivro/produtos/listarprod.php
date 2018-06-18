@@ -8,7 +8,7 @@
 <header>
 	<div class="row">
 		<div class="col-sm-6">
-			<h2>Usuarios</h2>
+			<h2>produtos</h2>
 		</div>
 		<div class="col-sm-6 text-right h2">
 	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Fazer Cadastro</a>
@@ -31,33 +31,26 @@
 <thead>
 	<tr>
 		<th>ID</th>
-		<th width="30%">Nome</th>
-		<th>CPF/CNPJ</th>
-		<th>Telefone</th>
-		<th>Email</th>
-		<th>Cidade</th>
-		<th>Endereço</th>
-		<th>Sexo</th>
+		<th width="30%">Titulo</th>
+		<th>Preço</th>
+		<th>Descrição</th>
+		<th>Imagem</th>
 		<th>Opções</th>
 	</tr>
 </thead>
 <tbody>
-<?php if ($usuarios) : ?>
-<?php foreach ($usuarios as $usuario) : ?>	<tr>
-		<td><?php echo $usuario["CPF"]; ?></td>
-		<td><?php echo $usuario["NOME"]; ?></td>
-		<td><?php echo $usuario["CPF"]; ?></td>
-		<td><?php echo $usuario["TELEFONE"]; ?></td>
-		<td><?php echo $usuario["EMAIL"]; ?></td>
-		<!-- <td><?php echo $usuario["SENHA"]; ?></td>  -->
-		<td><?php echo $usuario["CIDADE"]; ?></td>
-		<td><?php echo $usuario["ENDERECO"]; ?></td>
-		<td><?php echo $usuario["SEXO"]; ?></td>
-		
+<?php if ($produtos) : ?>
+<?php foreach ($produtos as $produto) : ?>	<tr>
+		<td><?php echo $produto["CODPROD"]; ?></td>
+		<td><?php echo $produto["TITULO"]; ?></td>
+		<td><?php echo $produto["PRECO"]; ?></td>
+		<td><?php echo $produto["DESCRICAO"]; ?></td>
+		<td><?php echo $produto["IMAGEM"]; ?></td>
+			
 		<td class="actions text-right">
-			<a href="view.php?id=<?php echo $usuario['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-			<a href="edit.php?id=<?php echo $usuario['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-usuario="<?php echo $usuario['id']; ?>">
+			<a href="view.php?id=<?php echo $produto['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
+			<a href="edit.php?id=<?php echo $produto['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-produto="<?php echo $produto['id']; ?>">
 				<i class="fa fa-trash"></i> Excluir
 			</a>
 		</td>
