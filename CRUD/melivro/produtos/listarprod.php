@@ -26,42 +26,43 @@
 <?php endif; ?>
 
 <hr>
-
-<table class="table table-hover">
-<thead>
-	<tr>
-		<th>ID</th>
-		<th width="30%">Titulo</th>
-		<th>Preço</th>
-		<th>Descrição</th>
-		<th>Imagem</th>
-		<th>Opções</th>
-	</tr>
-</thead>
-<tbody>
-<?php if ($produtos) : ?>
-<?php foreach ($produtos as $produto) : ?>	<tr>
-		<td><?php echo $produto["CODPROD"]; ?></td>
-		<td><?php echo $produto["TITULO"]; ?></td>
-		<td><?php echo $produto["PRECO"]; ?></td>
-		<td><?php echo $produto["DESCRICAO"]; ?></td>
-		<td><?php echo $produto["IMAGEM"]; ?></td>
-			
-		<td class="actions text-right">
-			<a href="view.php?id=<?php echo $produto['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-			<a href="edit.php?id=<?php echo $produto['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-produto="<?php echo $produto['id']; ?>">
-				<i class="fa fa-trash"></i> Excluir
-			</a>
-		</td>
-	</tr>
-<?php endforeach; ?>
-<?php else : ?>
-	<tr>
-		<td colspan="6">Nenhum registro encontrado.</td>
-	</tr>
-<?php endif; ?>
-</tbody>
-</table>
+<div class="table-responsive-sm">
+	<table class="table">
+	<thead>
+		<tr>
+			<th class="table-secondary" scope="col">ID</th>
+			<th class="table-secondary" scope="col">Titulo</th>
+			<th class="table-secondary" scope="col">Preço</th>
+			<th class="table-secondary" scope="col">Descrição</th>
+			<th class="table-secondary" scope="col">Imagem</th>
+			<th class="table-secondary" scope="col">Opções</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php if ($produtos) : ?>
+	<?php foreach ($produtos as $produto) : ?>	<tr>
+			<td><?php echo $produto["CODPROD"]; ?></td>
+			<td><?php echo $produto["TITULO"]; ?></td>
+			<td><?php echo $produto["PRECO"]; ?></td>
+			<td><?php echo $produto["DESCRICAO"]; ?></td>
+			<td><?php echo $produto["IMAGEM"]; ?></td>
+				
+			<td class="table-secondary">
+				<a href="view.php?id=<?php echo $produto['CODPROD']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
+				<a href="edit.php?id=<?php echo $produto['CODPROD']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-produto="<?php echo $produto['CODPROD']; ?>">
+					<i class="fa fa-trash"></i> Excluir
+				</a>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	<?php else : ?>
+		<tr>
+			<td colspan="6">Nenhum registro encontrado.</td>
+		</tr>
+	<?php endif; ?>
+	</tbody>
+	</table>
+</div>
 
 <?php include(FOOTER_TEMPLATE); ?>
