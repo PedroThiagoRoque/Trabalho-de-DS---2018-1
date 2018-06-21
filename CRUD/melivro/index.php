@@ -61,7 +61,20 @@
 		</a>
 	</div>
 </div>
+<div class="col-xs-6 col-sm-3 col-md-2">
+		<a href="vendas/listarvendas.php" class="btn btn-default">
+			<div class="row">
+				<div class="col-xs-12 text-center">
 
+					<i class="fa fa-money fa-5x"></i>
+				</div>
+				<div class="col-xs-12 text-center">
+					<p>Listar Vendas</p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
 <?php else : ?>
 	<div class="alert alert-danger" role="alert">
 		<p><strong>ERRO:</strong> Não foi possível Conectar ao Banco de Dados!</p>
