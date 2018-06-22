@@ -2,7 +2,7 @@
     require_once('functions.php');
 	index();
 ?>
-
+<?php include('modal.php'); ?>
 <?php include(HEADER_TEMPLATE); ?>
 
 <header>
@@ -43,9 +43,9 @@
 	</thead>
 	<tbody>
 
-	<?php 
-	if ($usuarios) : 
-		foreach ($usuarios as $usuario) : ?>	
+	<?php
+	if ($usuarios) :
+		foreach ($usuarios as $usuario) : ?>
 		<tr>
 			<td scope="row"><?php echo $usuario["NOME"]; ?></td>
 			<td><?php echo $usuario["CPF"]; ?></td>
@@ -57,7 +57,7 @@
 			<td class="table-secondary">
 				<a href="view.php?id=<?php echo $usuario['CPF']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
 				<a href="edit.php?id=<?php echo $usuario['CPF']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-usuario="<?php echo $usuario['CPF']; ?>">Excluir
+				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $usuario['CPF']; ?>">Excluir
 				</a>
 			</td>
 		</tr>
