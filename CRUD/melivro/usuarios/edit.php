@@ -5,26 +5,88 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2>Atualizar Cliente</h2>
+<h2 class="display-3">Atualizar Cliente <?php echo $usuario['NOME']; ?></h2>
 
-<form action="edit.php?id=<?php echo $customer['id']; ?>" method="post">
+<form action="edit.php?id=<?php echo $usuario['cpf'] ?>" method="post">
+  <div class="form-group row">
+  <div class="col">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Nome</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value ="<?php echo $usuario['NOME']; ?>"  >
+    </div>
+  </div>
+  <div class="col">
+    <label for="staticpass" class="col-sm-2 col-form-label">CPF</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value ="<?php echo $usuario['cpf']; ?>"  >
+    </div>
+  </div>
+  <div class="col">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Sexo</label>
+    <div class="col-sm-10">
+      <?php if($usuario['SEXO'] == 'f'){ ?>
+        <input class="form-control" type="text" value ="Feminino"  >
+      <?php } else { ?>
+        <input class="form-control" type="text" value ="Masculino"  >
+      <?php }?> 
+    </div>
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col">
+    <label for="staticpass" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value ="<?php echo $usuario['EMAIL']; ?>"  >
+    </div>
+  </div>
+  <div class="col">
+    <label for="staticpass" class="col-sm-2 col-form-label">Telefone</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value ="<?php echo $usuario['TELEFONE']; ?>"  >
+    </div>
+  </div>
+  </div>
+  <div class="form-group row">
+  <div class="col">
+    <label for="staticpass" class="col-sm-2 col-form-label">Endereço</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value ="<?php echo $usuario['ENDERECO']; ?>"  >
+    </div>
+  </div>
+  <div class="col">
+    <label for="staticpass" class="col-sm-2 col-form-label">Cidade</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value ="<?php echo $usuario['CIDADE']; ?>"  >
+    </div>
+  </div>
+  </div>
+</form>
+
+
+
+  <div id="actions" class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a href="index.php" class="btn btn-default">Cancelar</a>
+    </div>
+  </div>
+</form>
+
+<?php include(FOOTER_TEMPLATE); ?>om
+
+<!-- <form action="edit.php?id=<?php echo $usuario['cpf'] ?>" method="post">
   <hr />
   <div class="row">
     <div class="form-group col-md-7">
       <label for="name">Nome / Razão Social</label>
-      <input type="text" class="form-control" name="customer['name']" value="<?php echo $customer['name']; ?>">
+      <input type="text" class="form-control" name="customer['name']" value="<?php echo $usuario['NOME'];; ?>">
     </div>
 
     <div class="form-group col-md-3">
       <label for="campo2">CNPJ / CPF</label>
-      <input type="text" class="form-control" name="customer['cpf_cnpj']" value="<?php echo $customer['cpf_cnpj']; ?>">
+      <input type="text" class="form-control" name="customer['cpf_cnpj']" value="<?php echo $usuario['cpf']; ?>">
     </div>
 
-    <div class="form-group col-md-2">
-      <label for="campo3">Data de Nascimento</label>
-      <input type="text" class="form-control" name="customer['birthdate']" value="<?php echo $customer['birthdate']; ?>">
-    </div>
-  </div>
   <div class="row">
     <div class="form-group col-md-5">
       <label for="campo1">Endereço</label>
@@ -76,13 +138,4 @@
       <label for="campo3">UF</label>
       <input type="text" class="form-control">
     </div>
-  </div>
-  <div id="actions" class="row">
-    <div class="col-md-12">
-      <button type="submit" class="btn btn-primary">Salvar</button>
-      <a href="index.php" class="btn btn-default">Cancelar</a>
-    </div>
-  </div>
-</form>
-
-<?php include(FOOTER_TEMPLATE); ?>om
+  </div> -->
