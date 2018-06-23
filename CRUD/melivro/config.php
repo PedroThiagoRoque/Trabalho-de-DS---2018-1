@@ -1,7 +1,7 @@
 <?php
 
 /** O nome do banco de dados*/
-define('DB_NAME', 'MeLivro');
+define('DB_NAME', 'melivro');
 
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');
@@ -18,7 +18,7 @@ if ( !defined('ABSPATH') )
 	
 /** caminho no server para o sistema **/
 if ( !defined('BASEURL') )
-	define('BASEURL', '/');
+	define('BASEURL', '/melivro');
 	
 /** caminho do arquivo de banco de dados **/
 if ( !defined('DBAPI') )

@@ -1,11 +1,13 @@
 <?php
     require_once('functions.php');
-    index();
+	indexUser();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
 
 <header>
+	<hr>
+	<hr>
 	<div class="row">
 		<div class="col-sm-6">
 			<h2>Usuarios</h2>
@@ -27,48 +29,48 @@
 
 <hr>
 
-<table class="table table-hover">
-<thead>
-	<tr>
-		<th>ID</th>
-		<th width="30%">Nome</th>
-		<th>CPF/CNPJ</th>
-		<th>Telefone</th>
-		<th>Email</th>
-		<th>Cidade</th>
-		<th>Endereço</th>
-		<th>Sexo</th>
-		<th>Opções</th>
-	</tr>
-</thead>
-<tbody>
-<?php if ($usuarios) : ?>
-<?php foreach ($usuarios as $usuario) : ?>	<tr>
-		<td><?php echo $usuario["CPF"]; ?></td>
-		<td><?php echo $usuario["NOME"]; ?></td>
-		<td><?php echo $usuario["CPF"]; ?></td>
-		<td><?php echo $usuario["TELEFONE"]; ?></td>
-		<td><?php echo $usuario["EMAIL"]; ?></td>
-		<!-- <td><?php echo $usuario["SENHA"]; ?></td>  -->
-		<td><?php echo $usuario["CIDADE"]; ?></td>
-		<td><?php echo $usuario["ENDERECO"]; ?></td>
-		<td><?php echo $usuario["SEXO"]; ?></td>
-		
-		<td class="actions text-right">
-			<a href="view.php?id=<?php echo $usuario['cpf']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-			<a href="edit.php?id=<?php echo $usuario['cpf']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-usuario="<?php echo $usuario['cpf']; ?>">
-				<i class="fa fa-trash"></i> Excluir
-			</a>
-		</td>
-	</tr>
-<?php endforeach; ?>
-<?php else : ?>
-	<tr>
-		<td colspan="6">Nenhum registro encontrado.</td>
-	</tr>
-<?php endif; ?>
-</tbody>
-</table>
+<div class="table-responsive-sm">
+	<table class="table">
+	<thead>
+		<tr>
+			<th class="table-secondary" scope="col">Nome</th>
+			<th class="table-secondary" scope="col">CPF/CNPJ</th>
+			<th class="table-secondary" scope="col">Telefone</th>
+			<th class="table-secondary" scope="col">Email</th>
+			<th class="table-secondary" scope="col">Cidade</th>
+			<th class="table-secondary" scope="col">Opções</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	<?php 
+	if ($usuarios) : 
+		foreach ($usuarios as $usuario) : ?>	
+		<tr>
+			<td scope="row"><?php echo $usuario["NOME"]; ?></td>
+			<td><?php echo $usuario["CPF"]; ?></td>
+			<td><?php echo $usuario["TELEFONE"]; ?></td>
+			<td><?php echo $usuario["EMAIL"]; ?></td>
+			<!-- <td><?php echo $usuario["SENHA"]; ?></td>  -->
+			<td><?php echo $usuario["CIDADE"]; ?></td>
+
+			<td class="table-secondary">
+				<a href="view.php?id=<?php echo $usuario['CPF']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
+				<a href="edit.php?id=<?php echo $usuario['CPF']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $usuario['CPF']; ?>">Excluir
+				</a>
+			</td>
+		</tr>
+		<?php endforeach; ?>
+	<?php else : ?>
+		<tr>
+			<td colspan="6">Nenhum registro encontrado.</td>
+		</tr>
+	<?php endif; ?>
+	</tbody>
+	</table>
+</div>
+
+<?php include('modal.php'); ?>
 
 <?php include(FOOTER_TEMPLATE); ?>

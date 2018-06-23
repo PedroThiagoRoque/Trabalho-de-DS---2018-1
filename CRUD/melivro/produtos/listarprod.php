@@ -1,6 +1,6 @@
 <?php
-    require_once('functions.php');
-    index();
+    require_once('functionsProdutos.php');
+    indexProdutos();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -11,7 +11,7 @@
 			<h2>produtos</h2>
 		</div>
 		<div class="col-sm-6 text-right h2">
-	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Fazer Cadastro</a>
+	    	<a class="btn btn-primary" href="add/revista.php"><i class="fa fa-plus"></i> Fazer Cadastro</a>
 	    	<a class="btn btn-default" href="index.php"><i class="fa fa-refresh"></i> Atualizar</a>
 	    </div>
 	</div>

@@ -1,7 +1,7 @@
 <?php 
   require_once('../../config.php'); 
   require_once('addfuncoes.php'); 
-  addRevista();
+  addPaper();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -10,15 +10,15 @@
 	<hr>
 	
     <div id = "conteudo">
-    <h2 class="display-3"> Nova Revista</h2>
+    <h2 class="display-3"> Novo Paper</h2>
 	<nav aria-label="...">
 	  <ul class="pagination">
-		<li class="page-item active"><a class="page-link" href="revista.php">Revista</a></li>
-		<li class="page-item"> <a class="page-link" href="paper.php">Paper</a></li>
+		<li class="page-item"><a class="page-link" href="revista.php">Revista</a></li>
+		<li class="page-item active"><a class="page-link" href="paper.php">Paper</a></li>
 		<li class="page-item"><a class="page-link" href="livro.php">Livro</a></li>
 	  </ul>
 	</nav>
-	<form action="revista.php" method="post">
+	<form action="paper.php" method="post">
 	  <hr />
 	  <div class="row">
 		<div class="form-group col-md-7">
@@ -37,22 +37,39 @@
 		</div>
 		<div class="form-group col-md-7">
 		  <label for="campo1">Imagem</label>
-		  <input type="text" class="form-control" name="imagem" placeholder="Endereço">
+		  <input type="text" class="form-control" name="imagem" placeholder="Imagem">
 		</div>
 
 	  </div>
 	  <div class="row">
-	  
 		
 		<div class="form-group col-md-5">
-		  <label for="campo2">ISSN</label>
-		  <input type="text" class="form-control" name="issn"  placeholder="ISSN">
+		  <label for="campo2">Autor</label>
+		  <input type="text" class="form-control" name="autor"  placeholder="Autor">
 		</div>
 		
 		
 		<div class="form-group col-md-5">
-		  <label for="campo3">Editora</label>
-		  <input type="text" class="form-control" name="editora" placeholder="Editora">
+		  <label for="campo3">Coautor</label>
+		  <input type="text" class="form-control" name="coautor" placeholder="Coautor">
+		</div>
+	  </div>
+	  <div class="row">
+		
+		<div class="form-group col-md-5">
+		  <label for="campo2">Área de conhecimento</label>
+		  <input type="text" class="form-control" name="areadeconhecimento"  placeholder="Área de conhecimento">
+		</div>
+		
+		
+		<div class="form-group col-md-3">
+		  <label for="campo3">Ano de publicação</label>
+		  <input type="number" class="form-control" name="anodepublicacao" placeholder="Ex: 2002" min="1910">
+		</div>
+		
+		<div class="form-group col-md-3">
+		  <label for="campo3">Instituição</label>
+		  <input type="text" class="form-control" name="instituicao" placeholder="Ex: UFPEL">
 		</div>
 	  </div>
 	  

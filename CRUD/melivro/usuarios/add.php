@@ -1,17 +1,14 @@
 <?php 
   require_once('functions.php'); 
-  add();
+  addUser();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
-
-<head>
-      <title>MeLivro - Cadastro </title>
-</head>
  <body>
+ 	<hr>
+	<hr>
     <div id = "conteudo">
-    <h1> MeLivro </h1>
-    <h2> Novo Cliente </h2>
+    <h2 class="display-3"> Novo Usuario </h2>
 
 <form action="add.php" method="post">
   <!-- area de campos do form -->
@@ -37,8 +34,8 @@
     </div>
 
   </div>
-  
   <div class="row">
+  
     
     <div class="form-group col-md-5">
       <label for="campo2">Email</label>
@@ -55,11 +52,12 @@
   <div class="row">
     <div class="form-group col-md-2">
     <label for="campo1">Sexo</label>
-	  <select type="text" class="form-control" placeholder="F/M" name="usuario['sexo']">
-		  <option value="f">Feminino</option>
-		  <option value="m">Masculino</option>
+	<select type="text" class="form-control" placeholder="F/M" name="usuario['sexo']">
+		<option value="f">Feminino</option>
+		<option value="m">Masculino</option>
 	  </select>
   </div>
+
     
     <div class="form-group col-md-5">
       <label for="campo2">Telefone</label>

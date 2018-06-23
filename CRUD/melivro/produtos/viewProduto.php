@@ -1,6 +1,6 @@
 <?php 
-	require_once('functions.php'); 
-	viewUser($_GET['id']);
+	require_once('functionsProdutos.php'); 
+	viewProduto($_GET['id']);
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>

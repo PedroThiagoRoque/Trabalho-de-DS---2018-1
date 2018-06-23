@@ -1,6 +1,6 @@
 <?php 
-  require_once('functions.php'); 
-  editUser();
+  require_once('functionsProdutos.php'); 
+  editProduto();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>

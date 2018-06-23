@@ -1,7 +1,7 @@
 <?php 
   require_once('../../config.php'); 
   require_once('addfuncoes.php'); 
-  addRevista();
+  addLivro();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -10,15 +10,15 @@
 	<hr>
 	
     <div id = "conteudo">
-    <h2 class="display-3"> Nova Revista</h2>
+    <h2 class="display-3"> Novo Livro</h2>
 	<nav aria-label="...">
 	  <ul class="pagination">
-		<li class="page-item active"><a class="page-link" href="revista.php">Revista</a></li>
-		<li class="page-item"> <a class="page-link" href="paper.php">Paper</a></li>
-		<li class="page-item"><a class="page-link" href="livro.php">Livro</a></li>
+		<li class="page-item"><a class="page-link" href="revista.php">Revista</a></li>
+		<li class="page-item"><a class="page-link" href="paper.php">Paper</a></li>
+		<li class="page-item active"><a class="page-link" href="livro.php">Livro</a></li>
 	  </ul>
 	</nav>
-	<form action="revista.php" method="post">
+	<form action="livro.php" method="post">
 	  <hr />
 	  <div class="row">
 		<div class="form-group col-md-7">
@@ -37,22 +37,26 @@
 		</div>
 		<div class="form-group col-md-7">
 		  <label for="campo1">Imagem</label>
-		  <input type="text" class="form-control" name="imagem" placeholder="Endereço">
+		  <input type="text" class="form-control" name="imagem" placeholder="Imagem">
 		</div>
 
 	  </div>
 	  <div class="row">
-	  
 		
 		<div class="form-group col-md-5">
-		  <label for="campo2">ISSN</label>
-		  <input type="text" class="form-control" name="issn"  placeholder="ISSN">
+		  <label for="campo2">Autor</label>
+		  <input type="text" class="form-control" name="autor"  placeholder="Autor">
 		</div>
 		
 		
-		<div class="form-group col-md-5">
-		  <label for="campo3">Editora</label>
-		  <input type="text" class="form-control" name="editora" placeholder="Editora">
+		<div class="form-group col-md-3">
+		  <label for="campo3">ISBN</label>
+		  <input type="text" class="form-control" name="isbn" placeholder="Ex: 123455" min="1910">
+		</div>
+		
+		<div class="form-group col-md-3">
+		  <label for="campo3">Edição</label>
+		  <input type="number" class="form-control" name="edicaodolivro" placeholder="Ex: 2">
 		</div>
 	  </div>
 	  
