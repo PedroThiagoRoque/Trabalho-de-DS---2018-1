@@ -88,7 +88,7 @@ function updatePagamento($table = null, $id = 0, $data = null) {
 	$database = open_database();
 	// remove a ultima virgula
 	$items = rtrim($items, ',');
-	$sql1 = "UPDATE pagamento SET CODPAG = '{$data["'codpag'"]}', METODO_PAG = '{$data["'metodo_pag'"]}', VALOR = '{$data["'valor'"]}', CONCRETIZADO = '{$data["'concretizado'"]}'}'   WHERE pagamento.CODPAG =" . $id;
+	$sql1 = "UPDATE pagamento SET METODO_PAG = '{$data["'metodo_pag'"]}', VALOR = '{$data["'valor'"]}', CONCRETIZADO = '{$data["'concretizado'"]}', CODPAG = '{$data["'codpag'"]}' WHERE pagamento.CODPAG =" . $id;
 		
 	try {
 		$database->query($sql1);
