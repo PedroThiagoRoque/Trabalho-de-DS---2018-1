@@ -11,7 +11,7 @@
       </div>
       <div class="modal-footer">
         <a class="confirm btn btn-primary" href='delete.php'>Sim</a>
-        <a id="cancel" class="btn btn-default" data-dismiss="modal">Não</a>
+        <a id="cancel" class="btn btn-default" href='index.php' data-dismiss="modal">Não</a>
       </div>
     </div>
   </div>

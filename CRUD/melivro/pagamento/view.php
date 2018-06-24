@@ -5,7 +5,7 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2 class="display-3">Cliente <?php echo $usuario['cpf']; ?></h2>
+<h2 class="display-3">Pagamento</h2>
 <hr>
 
 <?php if (!empty($_SESSION['message'])) : ?>
@@ -15,7 +15,7 @@
 <form>
   <div class="form-group row">
 	<div class="col">
-		<label for="staticEmail" class="col-sm-2 col-form-label">Metodo de Pagamento</label>
+		<label for="staticEmail" class="col-sm-2 col-form-label">Metodo</label>
 		<div class="col-sm-10">
 			<input class="form-control" type="text" placeholder="<?php echo $pagamento['metodo_pag']; ?>" readonly>
 		</div>
@@ -23,7 +23,7 @@
 	<div class="col">
 		<label for="staticpass" class="col-sm-2 col-form-label">Valor</label>
 		<div class="col-sm-10">
-			<input class="form-control" type="number" placeholder="<?php echo $pagamento['CODPAG']; ?>" readonly>
+			<input class="form-control" type="text" placeholder="<?php echo $pagamento['valor']; ?>" readonly>
 		</div>
 	</div>
   </div>
