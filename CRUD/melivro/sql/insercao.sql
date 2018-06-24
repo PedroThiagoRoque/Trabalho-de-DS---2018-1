@@ -45,3 +45,10 @@ VALUES ('524523', 'Abril', '6'),
 INSERT INTO PAPER(AUTOR, COAUTOR, AREA_CONHECIMENTO,ANO_PUBLICACAO,INSTITUICAO,CODPROD)
 VALUES ('Manuel Correia', '','Exatas', '2002', 'UFPEL', '4'),
 ('Miguelito', '','Humanas', '2012', 'UCPEL', '5');
+
+
+INSERT INTO PAGAMENTO(CODPAG,METODO_PAG,VALOR,CONCRETIZADO)
+VALUES('0','Cartão','65.0',1),
+('1','Boleto','90.0',0),
+('2','PayPal','20.5',1),
+('3','Transferência Bancária','42.5',1);

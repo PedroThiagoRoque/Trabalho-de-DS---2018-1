@@ -79,6 +79,15 @@ CREATE TABLE `pagamento` (
   `CONCRETIZADO` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+---
+-- Dumping data for table `pagamento`
+--
+
+INSERT INTO 'pagamento' ('CODPAG','METODO_PAG','VALOR','CONCRETIZADO') VALUES
+(4, 'Cartao', '55.50', 1),
+(5, 'Boleto', '20.50', 0),
+(6,'PayPal', '82.00', 1);
+
 -- --------------------------------------------------------
 
 --
