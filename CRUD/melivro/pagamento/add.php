@@ -26,7 +26,7 @@
 
     <div class="form-group col-md-4">
       <label for="campo2">Valor</label>
-      <input type="number" class="form-control" name="valor" placeholder="Valor" value="1" min="1">
+      <input type="number" class="form-control" name="valor" placeholder="Valor" step=".01" value="1" min="1">
     </div>
 
    </div>
