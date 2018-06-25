@@ -81,13 +81,15 @@ function editUser() {
 /**
  *  Atualiza um registro em uma tabela, por ID
  */
-function updateUser($table = null, $id = 0, $data = null) {
+function updateUser($table = null, $id = null, $data = null) {
 	$database = open_database();
 	// remove a ultima virgula
 	$items = rtrim($items, ',');
-	$sql1 = "UPDATE pedido SET CPF = '{$data["'cpf'"]}', STATUS_PED = '{$data["'status_ped'"]}', DATA_PEDIDO = '{$data["'data_pedido'"]}', WHERE pedido.CODPEDIDO =" . $id;
+  $sql1 = "UPDATE pedido SET CPF = '{$data["'cpf'"]}', STATUS_PED = '{$data["'status_ped''"]}', DATA_PEDIDO = '{$data["'data_pedido'"]}' WHERE pedido.CODPEDIDO =" . $id;
+  $sql2 = "UPDATE pedido SET CPF = '{$data["'cpf'"]}', STATUS_PED = '{$data["'status_ped'"]}', DATA_PEDIDO = '{$data["'data_pedido'"]}' WHERE pedido.CODPEDIDO =" . $id;
 	try {
 		$database->query($sql1);
+    $database->query($sql2);
 		$_SESSION['message'] = 'Registro atualizado com sucesso.';
 		$_SESSION['type'] = 'success';
 	} catch (Exception $e) {
