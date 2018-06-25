@@ -50,7 +50,18 @@
 				<li><a class="dropdown-item" href="<?php echo BASEURL; ?>/produtos/find.php">Buscar Produto</a></li>
 			</ul>
           </li>
-           <li class="nav-item dropdown">
+           
+          <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Vendas
+            </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown02">
+           <li><a class="dropdown-item" href="<?php echo BASEURL; ?>/vendas/indexVendas.php">Listar Vendas</a></li>
+           <li><a class="dropdown-item" href="<?php echo BASEURL; ?>/produtos/findVendas.php">Buscar Venda</a></li>
+         </ul>
+              </li>
+		
+		<li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Pagamento
         </a>
