@@ -14,7 +14,7 @@
   <div class="row">
     <div class="form-group col-md-7">
       <label for="name">Código Pedido</label>
-      <input type="text" class="form-control" name="pedido['codpedido']" value="<?php echo $pedido['CODPEDIDO'];?>">
+      <input type="text" class="form-control" name="pedido['codpedido']" value="<?php echo $pedido['CODPEDIDO'];?>" readonly>
     </div>
     <div class="form-group col-md-4">
       <label for="campo2">CPF</label>
@@ -24,7 +24,7 @@
   <div class="row">
     <div class="form-group col-md-5">
       <label for="campo3">Data Pedido</label>
-      <input type="text" class="form-control" name="pedido['data_pedido']" value="<?php echo $pedido['DATA_PEDIDO'];?>">
+      <input type="date" class="form-control" name="pedido['data_pedido']" value="<?php echo $pedido['DATA_PEDIDO'];?>">
     </div>
 	    <div class="form-group col-md-7">
       <label for="campo1">Status Pedido</label>

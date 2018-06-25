@@ -85,7 +85,7 @@ function updateUser($table = null, $id = 0, $data = null) {
 	$database = open_database();
 	// remove a ultima virgula
 	$items = rtrim($items, ',');
-	$sql1 = "UPDATE pedido SET CODPEDIDO = '{$data["'codpedido'"]}', STATUS_PED = '{$data["'status_ped'"]}', DATA_PEDIDO = '{$data["'data_pedido'"]}', WHERE pedido.CODPEDIDO =" . $id;
+	$sql1 = "UPDATE pedido SET STATUS_PED = '{$data["'status_ped'"]}', DATA_PEDIDO = '{$data["'data_pedido'"]}', WHERE pedido.CODPEDIDO =" . $id;
 	try {
 		$database->query($sql1);
 		$_SESSION['message'] = 'Registro atualizado com sucesso.';

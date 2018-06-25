@@ -20,7 +20,7 @@
 			margin-bottom: 20px;
 		}
     </style>
-	
+
 </head>
 <body>
 
@@ -44,23 +44,35 @@
 		  <li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Produtos
-        </a>        
+        </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown02">
 				<li><a class="dropdown-item" href="<?php echo BASEURL; ?>/produtos/listarprod.php">Lista Produto</a></li>
 				<li><a class="dropdown-item" href="<?php echo BASEURL; ?>/produtos/find.php">Buscar Produto</a></li>
 			</ul>
-          </li>	  
+          </li>
            <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Pagamento
-        </a>        
+        </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown03">
               <li><a class="dropdown-item" href="<?php echo BASEURL; ?>/pagamento/add.php">Adicionar</a></li>
               <li><a class="dropdown-item" href="<?php echo BASEURL; ?>/pagamento/index.php">Listar</a></li>
         </ul>
+      </li>
+      <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Pedidos
+   </a>
+       <ul class="dropdown-menu" aria-labelledby="dropdown04">
+         <li><a class="dropdown-item" href="<?php echo BASEURL; ?>/pedidos/add.php">Adicionar</a></li>
+         <li><a class="dropdown-item" href="<?php echo BASEURL; ?>/pedidos/index.php">Listar</a></li>
+   </ul>
         </ul>
 
-          </li>   
+          </li>
+  
+
+         </li>
 
         <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
