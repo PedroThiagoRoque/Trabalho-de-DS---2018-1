@@ -5,10 +5,11 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<header>
+<header class="container">
+	<hr>
 	<div class="row">
 		<div class="col-sm-6">
-			<h2>produtos</h2>
+			<h1>Listagem dos Produtos</h1>
 		</div>
 		<div class="col-sm-6 text-right h2">
 	    	<a class="btn btn-primary" href="add/revista.php"><i class="fa fa-plus"></i> Fazer Cadastro</a>
@@ -49,9 +50,9 @@
 				
 			<td class="table-secondary">
 				<a href="view.php?id=<?php echo $produto['CODPROD']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-				<a href="edit.php?id=<?php echo $produto['CODPROD']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-produto="<?php echo $produto['CODPROD']; ?>">
-					<i class="fa fa-trash"></i> Excluir
+				<a href="editProduto.php?id=<?php echo $produto['CODPROD']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+				<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $produto['CODPROD']; ?>">
+					Excluir
 				</a>
 			</td>
 		</tr>
@@ -64,5 +65,7 @@
 	</tbody>
 	</table>
 </div>
+
+<?php include('modal.php'); ?>
 
 <?php include(FOOTER_TEMPLATE); ?>

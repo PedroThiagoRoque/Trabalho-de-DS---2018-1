@@ -55,7 +55,7 @@ function findProdutos( $table = null, $id = null ) {
       if ($id) {
         $sql = "SELECT * FROM produto WHERE produto.CODPROD = " . $id;
         $result = $database->query($sql);
-        
+		
         if ($result->num_rows > 0) {
           $found = $result->fetch_assoc();
         }
@@ -82,18 +82,17 @@ function findProdutos( $table = null, $id = null ) {
 /**
  *	Atualizacao/Edicao de Cliente
  */
- /*
-function editUser() {
+function editProduto() {
   if (isset($_GET['id'])) {
 	
     $id = $_GET['id'];
-    if (isset($_POST['usuario'])) {
-      $usuario = $_POST['usuario'];
-      updateUser('usuario', $id, $usuario);
-      header('location: index.php');
+    if (isset($_POST['produto'])) {
+      $produto = $_POST['produto'];
+      updateProduto('produto', $id, $produto);
+      header('location: listarprod.php');
     } else {
-      global $usuario;
-      $usuario = findUser('usuarios', $id);
+      global $produto;
+      $produto = findProdutos('produtos', $id);
     } 
   } else {
     header('location: index.php');
@@ -102,14 +101,21 @@ function editUser() {
 /**
  *  Atualiza um registro em uma tabela, por ID
  */
- /*
-function updateUser($table = null, $id = 0, $data = null) {
+function updateProduto($table = null, $id = 0, $data = null) {
 	$database = open_database();
-	// remove a ultima virgula
-	$items = rtrim($items, ',');
-	$sql1 = "UPDATE pessoa SET NOME = '{$data["'nome'"]}', CPF = '{$data["'cpf'"]}', EMAIL = '{$data["'email'"]}', ADMIN = '0' WHERE pessoa.CPF =" . $id;
-		
-	$sql2 = "UPDATE usuario SET CIDADE = '{$data["'cidade'"]}', ENDERECO = '{$data["'endereco'"]}', TELEFONE = '{$data["'telefone'"]}', SEXO = '{$data["'sexo'"]}', CPF = '{$data["'cpf'"]}' WHERE usuario.CPF =" . $id;
+	$sql1 = "UPDATE produto SET TITULO = '{$data["'titulo'"]}', PRECO = '{$data["'preco'"]}', DESCRICAO = '{$data["'descricao'"]}', IMAGEM = '{$data["'imagem'"]}' WHERE produto.CODPROD = '$id'";
+	
+	
+	$sqlaux = mysqli_query($database, "SELECT TIPOPRODUTO FROM produto WHERE produto.CODPROD = '$id'")or die(mysql_error());
+	$tipodoproduto = mysqli_fetch_array($sqlaux);
+	
+	if($tipodoproduto[0] == 0){
+		$sql2 = mysqli_query($database, "UPDATE revista SET ISSN = '{$data["'issn'"]}', EDITORA = '{$data["'editora'"]}' WHERE revista.CODPROD =" . $id)or die(mysql_error());
+	}elseif($tipodoproduto[0] == 1){
+		$sql2 = mysqli_query($database, "UPDATE paper SET AUTOR = '{$data["'autor'"]}', COAUTOR = '{$data["'coautor'"]}', AREA_CONHECIMENTO = '{$data["'areadeconhecimento'"]}', ANO_PUBLICACAO = '{$data["'anodepublicacao'"]}' , INSTITUICAO = '{$data["'instituicao'"]}'WHERE paper.CODPROD =" . $id)or die(mysql_error());
+	}elseif($tipodoproduto[0] == 2){
+		$sql2 = mysqli_query($database, "UPDATE livro SET AUTOR = '{$data["'autor'"]}', ISBN = '{$data["'isbn'"]}' , EDICAO = '{$data["'edicaodolivro'"]}'WHERE livro.CODPROD = '$id'")or die(mysql_error());
+	}
 	try {
 		$database->query($sql1);
 		$database->query($sql2);
@@ -121,38 +127,43 @@ function updateUser($table = null, $id = 0, $data = null) {
 	} 
 	close_database($database);
 }
-	*/
 
 /**
  *  Exclusão de um Cliente
  */
- /*
 function deleteProduto($id = null) {
   global $produto;
-  $produto = removeProduto('produtos', $id);
-  header('location: index.php');
+  $produto = removeProduto('usuario', $id);
+  header('location: listarprod.php');
 }
 
 /**
  *  Remove uma linha de uma tabela pelo ID do registro
  */
- /*
-function removeUser( $table = null, $id = null ) {
+function removeProduto( $table = null, $id = null ) {
   $database = open_database();
 	
   try {
     if ($id) {
-      $sql1 = "DELETE FROM usuario WHERE usuario.CPF = " . $id;
-      $sql2 = "DELETE FROM pessoa WHERE pessoa.CPF = " . $id;
-      //$result = $database->query($sql1);
-      if ($result = $database->query($sql1)) {   	
-        $_SESSION['message'] = "Registro Removido com Sucesso.";
-        $_SESSION['type'] = 'success';
-      }
-	  if ($result = $database->query($sql2)) {   	
-        $_SESSION['message'] = "Registro Removido com Sucesso.";
-        $_SESSION['type'] = 'success';
-      }
+		$sqlresult = mysqli_query($database, "SELECT TIPOPRODUTO FROM produto WHERE livro.CODPROD = '$id'");
+		$result = mysqli_fetch_array($sqlresult);
+		//echo $result['TIPOPRODUTO'];
+		$sql1 = "DELETE FROM produto WHERE produto.CODPROD = '$id'";
+		if($resultado['TIPOPRODUTO'] = 0){
+			$sql2 = "DELETE FROM revista WHERE revista.CODPROD = '$id'";
+		}elseif($resultado['TIPOPRODUTO'] = 1){
+			$sql2 = "DELETE FROM paper WHERE paper.CODPROD = '$id'";
+		}elseif($resultado['TIPOPRODUTO'] = 2){
+			$sql2 = "DELETE FROM livro WHERE livro.CODPROD = '$id'";
+		}
+		if ($result = $database->query($sql1)) {   	
+			$_SESSION['message'] = "Registro Removido com Sucesso.";
+			$_SESSION['type'] = 'success';
+		}
+		if ($result = $database->query($sql2)) {   	
+			$_SESSION['message'] = "Registro Removido com Sucesso.";
+			$_SESSION['type'] = 'success';
+		}
     }
   } catch (Exception $e) { 
     $_SESSION['message'] = $e->GetMessage();
@@ -160,5 +171,4 @@ function removeUser( $table = null, $id = null ) {
   }
   close_database($database);
 }
-*/
 ?>
