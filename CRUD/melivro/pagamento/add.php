@@ -14,9 +14,13 @@
   <!-- area de campos do form -->
   <hr />
   <div class="row">
+     <div class="form-group col-md-4">
+      <label for="campo1">ID</label>
+      <input type="number" class="form-control" name="pagamento['CODPAG']" placeholder="ID" min = "1">
+    </div>
     <div class="form-group col-md-7">
       <label for="name">Metodo de Pagamento</label>
-      <select type="text" class="form-control" placeholder="Metodo de Pagamento" name="pagamento['metodo_pag']">
+      <select type="text" class="form-control" placeholder="Metodo de Pagamento" name="pagamento['METODO_PAG']">
         <option value="Cartão">Cartão</option>
         <option value="Debito">Boleto</option>
         <option value="Paypal">PayPal</option>
@@ -26,9 +30,12 @@
 
     <div class="form-group col-md-4">
       <label for="campo2">Valor</label>
-      <input type="number" class="form-control" name="valor" placeholder="Valor" step=".01" value="1" min="1">
+      <input type="number" class="form-control" name="pagamento['VALOR']" placeholder="Valor" step=".01"  min="1">
     </div>
-
+     <div class="form-group col-md-4">
+      <label for="campo2">Concretizado</label>
+      <input type="bool" class="form-control" name="pagamento['CONCRETIZADO']" placeholder="True/False" >
+    </div>
    </div>
   <div class="row">
    
