@@ -14,10 +14,6 @@
   <!-- area de campos do form -->
   <hr />
   <div class="row">
-     <div class="form-group col-md-4">
-      <label for="campo1">ID</label>
-      <input type="number" class="form-control" name="pagamento['CODPAG']" placeholder="ID" min = "1">
-    </div>
     <div class="form-group col-md-7">
       <label for="name">Metodo de Pagamento</label>
       <select type="text" class="form-control" placeholder="Metodo de Pagamento" name="pagamento['METODO_PAG']">
