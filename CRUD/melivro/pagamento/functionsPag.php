@@ -35,15 +35,13 @@ function savePagamento($table = null, $data = null) {
   if($table == 'pagamento'){
 
     $sql1 = "INSERT INTO pagamento (CODPAG, METODO_PAG, VALOR, CONCRETIZADO)
-    VALUES ('{$data["'codpag'"]}','{$data["'metodo_pag'"]}', '{$data["'valor'"]}', '{$data["'concretizado'"]}')";
+    VALUES ('{$data["'CODPAG'"]}','{$data["'METODO_PAG'"]}', '{$data["'VALOR'"]}', '{$data["'CONCRETIZADO'"]}')";
     try {
       $database->query($sql1);
-
       $_SESSION['message'] = 'Registro cadastrado com sucesso.';
       $_SESSION['type'] = 'success';
     
     } catch (Exception $e) { 
-    
       $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
       $_SESSION['type'] = 'danger';
     } 
@@ -58,7 +56,7 @@ function savePagamento($table = null, $data = null) {
 
 function viewPagamentos($id = null){
 	global $pagamento;
-	$pagamento = findPagamentos('pagamento',$id);
+	$pagamento = findPagamentos('pagamentos',$id);
 }
 
 
@@ -75,7 +73,7 @@ function editPagamento() {
       header('location: index.php');
     } else {
       global $pagamento;
-      $pagamento = findPagamentos('pagamento', $id);
+      $pagamento = findPagamentos('pagamentos', $id);
     } 
   } else {
     header('location: index.php');
@@ -88,10 +86,11 @@ function updatePagamento($table = null, $id = 0, $data = null) {
 	$database = open_database();
 	// remove a ultima virgula
 	$items = rtrim($items, ',');
-	$sql1 = "UPDATE pagamento SET METODO_PAG = '{$data["'metodo_pag'"]}', VALOR = '{$data["'valor'"]}', CONCRETIZADO = '{$data["'concretizado'"]}', CODPAG = '{$data["'codpag'"]}' WHERE pagamento.CODPAG =" . $id;
-		
+	$sql1 = "UPDATE pagamento SET CODPAG = '{$data["'codpag'"]}', VALOR = '{$data["'valor'"]}', CONCRETIZADO = '{$data["'concretizado'"]}', METODO_PAG = '{$data["'metodo_pag'"]}' WHERE pagamento.CODPAG =" . $id;
+	$sql2 = "UPDATE pagamento SET CODPAG = '{$data["'codpag'"]}', VALOR = '{$data["'valor'"]}', CONCRETIZADO = '{$data["'concretizado'"]}', METODO_PAG = '{$data["'metodo_pag'"]}' WHERE pagamento.CODPAG =" . $id;	
 	try {
 		$database->query($sql1);
+    $database->query($sql2);
 		$_SESSION['message'] = 'Registro atualizado com sucesso.';
 		$_SESSION['type'] = 'success';
 	} catch (Exception $e) { 
@@ -117,11 +116,11 @@ function findPagamentos_all( $table ){
  */
 function findPagamentos($table = null, $id = null){
   	$database = open_database();
-	$found = null;
+	  $found = null;
 
   	if($table == 'pagamento'){
     	try{
-    		$sql = "SELECT * FROM pagamento";
+    		$sql = "SELECT * FROM pagamento" ;
     		$result = $database->query($sql);
 	    	if ($result->num_rows > 0) {
         		$found = $result->fetch_all(MYSQLI_ASSOC);
@@ -133,8 +132,8 @@ function findPagamentos($table = null, $id = null){
    }else{
      	try {
        	    if ($id) {
-          	   $sql = "SELECT * FROM pagamento WHERE pagamento.CODPAG = " . $id;
-   	      	   $result = $database->query($sql);
+              $sql = "SELECT * FROM pagamento WHERE pagamento.CODPAG = " . $id;   	      	 
+              $result = $database->query($sql);
     	    	if ($result->num_rows > 0) {
         	   		$found = $result->fetch_assoc();
         		}	
