@@ -279,6 +279,55 @@ body {
   margin: 0px 4px;
 }
 
+.corpo .conteudo {
+  font-size: 14px;
+  text-align: left;
+  color: #000000;
+}
+
+.corpo .conteudo img{
+  float: left;
+  height: 450px;
+  margin: 20px;
+}
+
+.corpo .conteudo h1 {
+  color: #191970;
+  font-size: 20px;
+  text-align: left;
+}
+
+.corpo .conteudo .pedido {
+  text-align: right;
+  font-size: 19px;
+}
+
+.corpo .conteudo p.valorlivro{
+  text-indent: 10px;
+  float: right;
+  margin: 13px;
+  height: 35px;
+  border: 10px double #B22222;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FFFACD;
+  font-size: 22px;
+  text-align: left;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+.corpo .conteudo p.valorlivro:read-only{
+  background-color:#B22222;
+}
+
+.corpo .conteudo .itens .titulolivro h1{
+  color: #B22222;
+  font-size: 25px;
+  text-align: left;  
+}
+
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
