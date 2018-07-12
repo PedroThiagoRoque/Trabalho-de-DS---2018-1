@@ -202,6 +202,12 @@ body {
 }
 
 
+.armacao .conteudo{
+  text-align: left;
+  color: #363636;
+}
+
+
 /*Estilo dos itens da pagina */
 .corpo .conteudo .itens h1{
     font-size: 23px;
