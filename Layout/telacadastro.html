@@ -1,0 +1,107 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MeLivro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <script src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div class="armacao">
+       <br></br>
+      <img src="imagem/logo1.png"  alt="logo" title="MeLivro" height="95px" >  
+       <br></br>
+      <div id="container_demo" >
+         <a class="hiddenanchor" id="toregister"></a>
+          <div id="wrapper">
+             <div id="register" class="animate form">
+                 <form  action="add.php" method="post" autocomplete="on"> 
+                    <h1> Crie sua conta </h1> 
+                 <div class="row">
+                     <div class="form-group col-md-6">
+                       <p> 
+                         <label for="usernamesignup" class="uname" data-icon="u">Usuário</label>
+                         <input id="usernamesignup" name="required" required="required" type="text" placeholder="Nome de usuário" />
+                       </p>
+                     </div>
+                    <div class="form-group col-md-6">
+                       <p> 
+                          <label for="cpfsignup" class="youcpf" data-icon="c" > CPF</label>
+                          <input id="cpfsignup" name="cpfsignup" required="required" type="text" placeholder="XXX.XXX.XXX-XX" maxlength="14"/>                                    
+                       </p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <p> 
+                          <label for="passwordsignup" class="youpasswd" data-icon="p">Senha </label>
+                          <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Digite sua senha"/>  
+                       </p>
+                   </div>
+                    <div class="form-group col-md-6">
+                         <p> 
+                          <label for="addresssignup" class="youaddress" data-icon="a" > Endereço</label>
+                          <input id="addresssignup" name="addresssignup" required="required" type="text" placeholder="Digite seu endereço"/>   
+                         </p>
+                    </div>
+                </div>
+               <div class="row">
+                   <div class="form-group col-md-6">
+                     <p> 
+                         <label for="emailsignup" class="youmail" data-icon="e" > Email</label>
+                        <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="meuemail@mail.com"/> 
+                     </p>
+                   </div>
+                 <div class="form-group col-md-6">
+                     <p> 
+                       <label for="citysignup" class="youcity" data-icon="c" > Cidade</label>
+                      <input id="citysignup" name="citysignup" required="required" type="text" placeholder="Digite sua cidade"/>      
+                     </p>
+                </div>
+                <div class="form-group col-md-6">
+                  <p> 
+                    <label for="sexsignup" class="yousex" data-icon="s" > Sexo</label>
+                      <select type="text" class="form-control" >
+                         <option value="f">Feminino</option>
+                         <option value="m">Masculino</option>
+                         <option value="o">Outro</option>
+                      </select>
+                  </p>
+                 </div>
+                <div class="form-group col-md-6">
+                  <p> 
+                     <label for="fonesignup" class="youfone" data-icon="f">Telefone </label>
+                     <input id="fonesignup" name="fonesignup" required="required" type="text" placeholder="Digite seu telefone"/>
+                 </p>
+                </div>
+             </div>
+                  
+            </form>     
+              <div id="actions" class="row">
+                    <div class="btn-group mr-2" role="group" >
+                      <p class="signin button"> 
+                            <button type="submit" value="Cadastrar" class="btn btn-primary btn-lg btn-block "/> Cadastrar </button>
+                      </p>
+                     </div>
+                     <div class="btn-group mr-2" role="group" >
+                     <p class="cancelar button"> 
+                            <a href="menuPrincipal.html"> <button type="submit" value="Cancelar" class="btn btn-default btn-lg btn-block"/> Cancelar </button> </a>
+                     </p>
+                    </div>
+                  </div>
+                  </div>
+                     <p class="change_link">  
+                       Já possui cadastro ?
+                       <a href="telalogin.html" class="to_register">Entre.</a>
+                    </p>
+              </div>
+            </div>
+ 
+
+        <div class="rodape">
+            Copyright &COPY; 2018 MeLivro. Todos os Direitos Reservados.
+        </div>
+    </body>
+</html>
