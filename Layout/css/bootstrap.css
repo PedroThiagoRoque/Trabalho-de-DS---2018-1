@@ -378,6 +378,88 @@ input {
 
 }
 
+/* Star Rating
+––––––––––––––––––––––––––––––––– */
+
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+.avaliacao h2{
+  font-size: 39px; 
+  text-align: center;
+  color: #363636;
+}
+
+.avaliacao p{
+  font-size: 16px; 
+  text-align: center;
+  color: #363636;
+}
+
+
+:focus {
+  outline: none;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  font-family: Satisfy, sans-serif;
+  font-size: 1.25em;
+}
+
+[contenteditable] {
+  border: 1px solid #000;
+  box-shadow: inset 3px 3px 0 #ccc;
+  padding: 1em;
+  min-height: 8em;
+  font-size: 11px;
+}
+
+.stars {
+  letter-spacing: -4px;
+  display: inline-block;
+}
+
+.stars > * {
+  color: #ccc;
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25em 0 0;
+  margin-top: 0;
+}
+
+.stars > *:hover {
+  text-shadow: 0 0 5px #ffc107;
+}
+
+.stars:hover > *, .stars > .selected {
+  color: #ffc107;
+}
+
+.stars > *:hover ~ * {
+  color: #ccc;
+}
+
+.submitted {
+ font-size: 1.5em; 
+ padding: 1em;
+ text-align: center;
+ font-weight: bold;
+ color: #fff;
+ background: #ffc107;
+}
+
+.submitted::after {
+ content: '\0020\2713'; 
+}
+
+
+.you-rated {
+  margin-top: 0.125em;
+}
+
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
