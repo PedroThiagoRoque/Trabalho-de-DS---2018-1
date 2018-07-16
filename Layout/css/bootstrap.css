@@ -461,6 +461,19 @@ input {
   margin-top: 0.125em;
 }
 
+/* css navbar dropdown usuario*/
+
+#navbarDropdownMenuLink:hover{
+    text-decoration: None;
+}
+
+.dropdown-toggle::after {
+    display: None;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important;
