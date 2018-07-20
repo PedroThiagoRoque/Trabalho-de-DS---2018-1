@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
     <script src="js/bootstrap.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
 
 </head>
@@ -38,12 +34,11 @@
    </nav>
       <img src="imagem/logo1.png"  alt="logo" title="MeLivro" height="95px" >
     <div class="cabecalho">
-                  <button class="button button1">Minhas Vendas</button>
-                  <button class="button button2">Historico</button>
+                  <a href="minhasvendas.html"> <button class="button button1">Minhas Vendas</button></a>
+                  <a href="historico.html"><button class="button button2">Historico</button></a>
                   <a href="telacadastro.html"><button class="button button3">Cadastre-se</button></a>
                   <a href="telalogin.html"><button class="button button4">Entrar</button></a>         
     </div>
- <br></br>
  <div class="corpo">
             
         <div class="menuContainer">
@@ -68,40 +63,43 @@
         </li></li>
         <br></br>
 
-        <div class="busca">
-                <form class="form-inline mt-2 mt-md-0">
-            <div class="input-group">
-                <input type="text" class="form-control" size="95" placeholder="Digite o produto desejado">
-                 
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >
-                            <img src="imagem/searchicon.png"alt="busca" title="search"  height="15px"/>
-                        </button>
-            
-                        <button class="btn btn-outline-success my-3 my-sm-0" type="submit" >
-                                <img src="imagem/carrinho.png"alt="carrinho" title="carrinho"  height="15px"/>
+         <div class="busca">
+                    <form class="form-inline mt-2 mt-md-0">
+                <div class="input-group">
+                    <input type="text" class="form-control" size="95" placeholder="Digite o produto desejado">
+                     
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >
+                                <img src="imagem/searchicon.png"alt="busca" title="search"  height="15px"/>
                             </button>
-                    </form>
+                
+                            <button class="btn btn-outline-success my-3 my-sm-0" type="submit" >
+                                    <img src="imagem/carrinho.png"alt="carrinho" title="carrinho"  height="15px"/>
+                                </button>
+                        </form>
+                </div>
+            </div>
+        <br></br>
+        <div class="itens">
+            <div class="perfil">
+                <h1>Meu Perfil</h1>
             </div>
         </div>
-        
-        <br></br>
- <div class="panel-heading">
-        <h3 class="panel-title">Cerginho da Pereira</h3>
-        <img src="imagem/icon_user.png"  alt="useraccount" title="useraccount" height="99px">  
-        <div class="stars">
-                <span class="star-1">&#x2605;</span>
-                <span class="star-2">&#x2605;</span>
-                <span class="star-3">&#x2605;</span>
-                <span class="star-4">&#x2605;</span>
-                <span class="star-5">&#x2605;</span>
-              </div>
-    </div>
-      
-                <br></br>
+
   <div class="card">
      <div class="container">
         <div class="row">
             <div class="panel panel-info">
+                 <h3 class="panel-title">Cerginho da Pereira</h3>
+                 <img src="imagem/icon_user.png"  alt="useraccount" title="useraccount" height="99px">  
+                 <br></br>
+                <div class="stars">
+                    <span class="star-1">&#x2605;</span>
+                    <span class="star-2">&#x2605;</span>
+                    <span class="star-3">&#x2605;</span>
+                    <span class="star-4">&#x2605;</span>
+                    <span class="star-5">&#x2605;</span>
+                </div>
+              <br></br>
               <div class="panel-body">
                 <div class="row">
                   <div class=" col-md-9 col-lg-9 ">
@@ -141,16 +139,16 @@
                     
         <h1>Anúncios Ativos</h1>
         
-        <a href="mostraranuncio1.html">
+        <a href="mostraranuncio.html">
         <div class="itemListaConteudo">
-                <img src="imagem/engenhariasoftware.jpg" alt="Engenharia de Software" />
+                <img src="imagem/livrodoscodigos.jpg" alt="Livrodoscodigos" />
 
                 <p class="tituloItemListaConteudo">
-                    Engenharia de Software
+                    O Livro dos Códigos
                 </p>
 
                 <p class="valorItemListaConteudo">
-                    R$ 52,00
+                    R$ 72,00
                 </p>
             </div>
         </a>
