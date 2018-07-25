@@ -18,16 +18,16 @@
             <br></br>
             <br></br>
             <div class="conteudo">
-                <form role="form">
+                <form role="form" action="../autenticacao.php" method="post">
                     <fieldset>
                         <div class="form-group ls-login-user">
                             <label for="userLogin"><b>Usuário:</b></label>
-                            <input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Usuário">
+                            <input class="form-control ls-login-bg-user input-lg" name="cpf" type="text" aria-label="Usuário" placeholder="Usuário">
                         </div>
          
                         <div class="form-group ls-login-password">
                             <label for="userPassword"><b>Senha:</b></label>
-                            <input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" aria-label="Senha" placeholder="Senha">
+                            <input class="form-control ls-login-bg-password input-lg" name="pass" type="password" aria-label="Senha" placeholder="Senha">
                         </div>
          
                         <a href="recuperaSenha.html" class="ls-login-forgot">Esqueci minha senha</a>
