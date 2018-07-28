@@ -4860,6 +4860,12 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
+
+.card .container .row h4{
+   text-align: left;
+}
+
+
 .card {
   position: relative;
   display: -ms-flexbox;
